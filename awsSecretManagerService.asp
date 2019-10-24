@@ -1,7 +1,7 @@
 <%
 
-Const aws_accessKey     = "YOUR PRIVATE KEY"
-Const aws_secretKey     = "YOUR ACCESS KEY"
+Const aws_accessKey     = "YOUR ACCESS KEY"
+Const aws_secretKey     = "YOUR PRIVATE KEY"
 Const aws_waitTimeout   = 28
 Const aws_algorithm     = "AWS4-HMAC-SHA256"
 Const aws_region        = "ap-southeast-2"
