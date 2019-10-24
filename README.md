@@ -1,5 +1,5 @@
-# classic-asp-aws4signer
-Create http client request to AWS secret manager since there is no AWS sdk for classic asp
+# classic-asp-aws4signer-aws-secretmanager
+
 
 Straight forward setup with payload and targer property
 Depend on target, payload could be empty.
