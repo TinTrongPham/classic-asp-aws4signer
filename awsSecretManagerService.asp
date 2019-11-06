@@ -134,7 +134,7 @@ Class awsSecretManagerService
         Dim iOffset: iOffset = sh.RegRead("HKLM\System\CurrentControlSet\Control\TimeZoneInformation\ActiveTimeBias")
         Dim dtNowGMT: dtNowGMT = DateAdd("n", iOffset, Now())
         Dim strNowInGMT: strNowInGMT = NowInGMT(dtNowGMT)        
-        Dim strNowDateOnly: strNowDateOnly = Year(dtNowGMT) & Month(dtNowGMT) & Day(dtNowGMT)    
+        Dim strNowDateOnly: strNowDateOnly = Year(dtNowGMT) & RIGHT("0" & Month(dtNowGMT),2) & RIGHT("0" & Day(dtNowGMT),2) 
         Dim credentialScope: credentialScope = strNowDateOnly & "/" & aws_region & "/" & aws_serviceName & "/aws4_request"
         Dim canonicalRequest: canonicalRequest = "POST" & chr(10) & "/" & chr(10) & "" & chr(10) & "host:secretsmanager.ap-southeast-2.amazonaws.com" & chr(10) & "x-amz-date:"& strNowInGMT & chr(10) & "x-amz-target:" & serviceTarget & chr(10) & "" & chr(10) & "host;x-amz-date;x-amz-target" & chr(10) & Hash(strPayLoad)  
         Dim hashedCanonicalRequest: hashedCanonicalRequest = Hash(canonicalRequest)
